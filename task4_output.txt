@@ -1,0 +1,27 @@
+Student ID: 230103222
+Logical cores: 12
+Workers: 4
+Items: 1000
+Workload: sleep(0.0001 * (i % 20))
+Dynamic chunk size: 1
+Timing excludes queue setup and thread creation.
+
+Strategy   |    Wall ms |   First ms |    Last ms |   Delta ms
+------------------------------------------------------------------
+Static     |    333.532 |    324.714 |    332.980 |      8.266
+Dynamic    |    318.833 |    316.815 |    318.686 |      1.872
+
+Static worker details:
+Worker 0: items=250, finished=325.092 ms
+Worker 1: items=250, finished=327.266 ms
+Worker 2: items=250, finished=324.714 ms
+Worker 3: items=250, finished=332.980 ms
+
+Dynamic worker details:
+Worker 0: items=246, finished=318.161 ms
+Worker 1: items=236, finished=317.728 ms
+Worker 2: items=259, finished=318.686 ms
+Worker 3: items=259, finished=316.815 ms
+
+Wall-time ratio (Static / Dynamic): 1.046x
+Verified: 1000 items processed in each strategy.
