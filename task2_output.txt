@@ -1,0 +1,19 @@
+Student ID: 230103222
+OS: Windows-11-10.0.26200-SP0
+CPU / platform: Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+Logical cores: 12
+Elements: 20000000
+Parallelizable fraction: 0.95
+Timing includes process startup, summation and shutdown.
+Array generation and shared-memory setup are excluded.
+
+  Cores |   Wall Time (ms) |    Speedup |  Amdahl Upper Bound
+---------------------------------------------------------------
+      1 |          693.568 |     1.000x |              1.000x
+      2 |          528.971 |     1.311x |              1.905x
+      4 |          519.959 |     1.334x |              3.478x
+     12 |          760.545 |     0.912x |              7.742x
+     24 |         1379.079 |     0.503x |             11.163x
+
+Sum (1 worker): 9999715.089449897408
+All parallel sums match within floating-point tolerance.
