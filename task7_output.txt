@@ -1,0 +1,28 @@
+Student ID: 230103222
+OS: Windows-11-10.0.26200-SP0
+CPU: Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+Available logical cores: 12
+Elements per array: 30,000,000
+Data type: float64
+Repeats: 5; reported time: median
+Timing includes task submission and waiting.
+Compilation, allocation and thread startup are excluded.
+
+Kernel       | Cores |     Wall ms |   Speedup | Efficiency |     GB/s*
+------------------------------------------------------------------------------
+A: Copy      |     1 |      85.939 |    1.000x |   100.00% |     5.585
+A: Copy      |     2 |      46.919 |    1.832x |    91.58% |    10.230
+A: Copy      |    12 |      47.874 |    1.795x |    14.96% |    10.026
+B: Compute   |     1 |    1026.872 |    1.000x |   100.00% |     0.467
+B: Compute   |     2 |     395.680 |    2.595x |   129.76% |     1.213
+B: Compute   |    12 |     126.582 |    8.112x |    67.60% |     3.792
+
+* GB/s is useful array traffic, not measured RAM-bus traffic.
+Sampled output checks passed for every run configuration.
+
+Scaling assessment:
+Copy speed gain from 2 to max cores: 0.980x
+Compute speed gain from 2 to max cores: 3.126x
+Kernel A (Copy) stalled in scaling (<=20% improvement from 2 to max cores).
+This is consistent with memory-channel saturation, but timing alone cannot prove the cause.
+Kernel B continued to benefit from additional workers.
