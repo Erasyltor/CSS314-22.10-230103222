@@ -1,1 +1,3 @@
-# CSS314-22.10-230103222
+# Yerassyl Torebek
+#02-N
+#07-P
