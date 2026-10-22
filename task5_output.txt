@@ -1,0 +1,21 @@
+Student ID: 230103222
+Workers / logical cores: 12
+Operation: y[i] = 2.5 * x[i] + 1.2
+Repeats: 3; reported time: median
+Parallel method: persistent process pool, shared arrays
+Timing includes task dispatch, computation and waiting.
+Allocation, initialization and pool startup are excluded.
+
+           N |    Serial ms |  Parallel ms |   Speedup | Result
+----------------------------------------------------------------------------
+         100 |        0.029 |        0.602 |    0.047x | SLOWER / EQUAL
+       1,000 |        0.108 |        0.729 |    0.148x | SLOWER / EQUAL
+      10,000 |        1.112 |        0.743 |    1.497x | FASTER
+     100,000 |       11.354 |        5.209 |    2.179x | FASTER
+   1,000,000 |      101.116 |       23.846 |    4.240x | FASTER
+  10,000,000 |     1016.985 |      263.466 |    3.860x | FASTER
+
+Detected slower-to-faster crossover intervals:
+N in (1,000, 10,000]: slower/equal at 1,000, faster at 10,000.
+Tested sizes where parallel is faster: 10,000, 100,000, 1,000,000, 10,000,000
+All computed outputs verified.
