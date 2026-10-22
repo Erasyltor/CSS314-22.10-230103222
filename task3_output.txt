@@ -1,0 +1,20 @@
+Student ID: 230103222
+OS: Windows-11-10.0.26200-SP0
+Logical cores: 12
+Physical cores / workers: 6
+Worker type: processes
+Increments per worker: 50000000
+Padded counter spacing: 64 bytes
+Timing includes worker release, work and joining.
+Process startup is excluded.
+
+Running Unpadded Shared...
+Running Padded...
+
+Version                |   Wall Time (ms)
+-------------------------------------------
+Unpadded Shared        |        14126.189
+Padded                 |         8694.093
+
+Execution ratio (Shared / Padded): 1.625x
+All counter values verified.
