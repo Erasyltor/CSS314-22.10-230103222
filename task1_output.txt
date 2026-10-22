@@ -1,0 +1,10 @@
+output = """CPU / platform: Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+Logical cores: 12
+Elements: 20000000
+Execution: serial, single thread
+Sum: 9999715.089450532570
+Standard deviation (population): 0.288688043304
+Generation time: 3362.438 ms
+Calculation time: 2122.763 ms
+Total wall-clock time: 5485.201 ms
+"""
