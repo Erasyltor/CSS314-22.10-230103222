@@ -5,7 +5,7 @@ import time
 import math
 from array import array
 
-STUDENT_ID = "230103222"  # Впиши свой Student ID
+STUDENT_ID = "230103222"  
 
 SIZE = 20_000_000
 
