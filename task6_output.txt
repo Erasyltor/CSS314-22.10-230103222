@@ -1,0 +1,20 @@
+Student ID: 230103222
+Python: 3.14.3
+Threads: 4
+Increments per thread: 2,000,000
+Expected final value: 8,000,000
+Thread switch interval: 0.000100 seconds
+Timing excludes thread creation.
+
+Running WITHOUT lock...
+Running WITH lock...
+
+Version        | Actual value | Lost updates |    Lost % |      Wall ms
+--------------------------------------------------------------------------
+Without lock   |    4,948,439 |    3,051,561 |   38.145% |     1607.999
+With lock      |    8,000,000 |            0 |    0.000% |     8739.286
+
+Synchronization time penalty: 7131.288 ms
+Locked / unlocked time ratio: 5.435x
+Time change: 443.49%
+Verified: locked counter equals 8,000,000.
